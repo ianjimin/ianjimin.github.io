@@ -4,6 +4,7 @@ import About from './components/About'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Services from './components/Services'
+import Activities from './components/Activities'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import ThemeProvider from './context/ThemeContext'
@@ -19,6 +20,7 @@ function App() {
           <Skills />
           <Projects />
           <Services />
+          <Activities />
           <Contact />
         </main>
         <Footer />

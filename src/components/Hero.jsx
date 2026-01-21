@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 export default function Hero() {
   const [animatedText, setAnimatedText] = useState('deliver')
-  const texts = ['deliver', 'real impact']
+  const texts = ['deliver', 'impact','improve']
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -15,17 +15,6 @@ export default function Hero() {
     return () => clearInterval(interval)
   }, [])
 
-  const features = [
-    { icon: '⚙️', label: 'Precise' },
-    { icon: '🔧', label: 'Robust' },
-    { icon: '📐', label: 'Optimized' },
-    { icon: '🚀', label: 'Scalable' },
-    { icon: '✅', label: 'Tested' },
-    { icon: '💡', label: 'Innovative' },
-    { icon: '🎯', label: 'Reliable' },
-    { icon: '⚡', label: 'Efficient' },
-  ]
-
   return (
     <section id="home" className="hero">
       <div className="hero-content">
@@ -35,6 +24,27 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
+          <motion.div
+            className="hero-image-container"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+          >
+            <img 
+              src="/images/headshot.jpg" 
+              alt="Ian Kim" 
+              className="hero-headshot"
+              onError={(e) => {
+                // Try alternative extensions
+                const src = e.target.src
+                if (src.includes('.jpg')) {
+                  e.target.src = src.replace('.jpg', '.jpeg')
+                } else if (src.includes('.jpeg')) {
+                  e.target.src = src.replace('.jpeg', '.png')
+                }
+              }}
+            />
+          </motion.div>
           <p className="hero-greeting">Hello, I'm</p>
           <h1 className="hero-name">Ian Kim</h1>
           <p className="hero-role">Mechanical Engineering Student</p>
@@ -76,27 +86,6 @@ export default function Hero() {
           </a>
         </motion.div>
       </div>
-
-      <motion.div
-        className="hero-features"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.6 }}
-      >
-        {features.map((feature, index) => (
-          <motion.div
-            key={index}
-            className="feature-item"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.7 + index * 0.1 }}
-            whileHover={{ scale: 1.1, y: -5 }}
-          >
-            <span className="feature-icon">{feature.icon}</span>
-            <span className="feature-label">{feature.label}</span>
-          </motion.div>
-        ))}
-      </motion.div>
     </section>
   )
 }

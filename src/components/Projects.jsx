@@ -158,6 +158,7 @@ export default function Projects() {
       description: 'Compared analytical plate theory to SolidWorks FEA for a rectangular steel plate under concentrated point loads. Used circular-plate simplification and the Shi et al. formulation for rotationally restrained edges. Analyzed deflection at 100 N and 150 N, validated stress remained elastic below yield, and documented sources of error between hand calculations, simulation, and physical behavior.',
       tags: ['FEA', 'SolidWorks', 'Structural Analysis', 'Plate Theory', 'Research'],
       link: '/Ian-Kim-Research.pdf',
+      previewImage: '/images/projects/plate-deformation-preview.jpg',
       images: [],
       details: [
         'Applied plate bending theory: circular-plate simplification and rectangular formulation with rotationally restrained edges (Shi, Li, Wang 2016)',

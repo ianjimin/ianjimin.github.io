@@ -128,6 +128,31 @@ export default function Projects() {
         'Contributed to understanding of traumatic brain injury mechanics'
       ],
       technologies: ['ANSYS', 'Python', 'Modal Analysis', 'FEA', 'Data Visualization', 'Biomechanics']
+    },
+    {
+      title: 'Phone Box For Screen Habits',
+      description: 'This phone box reimagines screen time management by empowering users through a flexible and gamified approach. It features a 3D printed phone stand and an ultrasonic sensor to detect phone presence and usage. A timing algorithm tracks box usage duration, rewarding users with points, ranks, and streaks, which are displayed on an LCD screen. An LED powered bear indicator is also used to reinforce feedback cues. The design is intentionally simple and non-restrictive to promote distraction free and intentional habit creation.',
+      tags: ['Product Design', 'Gamification', 'Screen Time Management', '3D Printing', 'CAD', 'Electronics', 'Prototyping', 'Laser Cutting', 'Habit Formation'],
+      link: '#',
+      previewImage: '/images/projects/phone-box-prototype-preview.jpg',
+      images: [
+        '/images/projects/phone-box-prototype.jpg',
+        '/images/projects/phone-box-cad-render.jpg',
+        '/images/projects/phone-box-technical-drawings.jpg'
+      ],
+      details: [
+        'Reimagined screen time management through a flexible and gamified approach',
+        'Features a 3D printed phone stand and an ultrasonic sensor to detect phone presence and usage',
+        'Implemented a timing algorithm to track box usage duration, rewarding users with points, ranks, and streaks',
+        'Utilized an LCD screen for displaying user progress (points, ranks, streaks)',
+        'Incorporated an LED-powered bear indicator to reinforce feedback cues',
+        'Designed with simplicity and non-restrictiveness to promote distraction-free habit creation',
+        'Used Onshape CAD to design 3D printed phone stand and enclosure components for prototyping and design visualization',
+        'Utilized Cura software to slice CAD models and prepare them for 3D printing',
+        'Created enclosure using AutoCAD to design custom wooden shapes for laser cutting and box assembly',
+        'Fabricated prototype with hand tools and integrated electrical components'
+      ],
+      technologies: ['Onshape CAD', 'Cura', 'AutoCAD', '3D Printing', 'Laser Cutting', 'Ultrasonic Sensor', 'LCD Screen', 'LEDs', 'Electronics', 'Prototyping']
     }
   ]
 
